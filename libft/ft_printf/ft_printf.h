@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 16:50:17 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/14 17:40:28 by aperron          ###   ########.fr       */
+/*   Created: 2023/11/02 12:01:00 by aperron           #+#    #+#             */
+/*   Updated: 2023/12/14 16:12:39 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-# include "../libft/libft.h"
+# include "libft_ft_printf.h"
+
+void	write_output_char(char c, int *counter);
+
+void	write_string(char *c, int *counter, int to_free);
+
+char	*long_hexa(unsigned long long nb, char *base);
+
+void	write_number(long n, int *counter);
+
+void	determine_output(char format, va_list args, int *counter);
+
+void	write_pointer(void *p, int *counter);
 
 #endif

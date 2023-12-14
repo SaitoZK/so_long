@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   libft_get_next_line.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 16:50:17 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/14 17:40:28 by aperron          ###   ########.fr       */
+/*   Created: 2023/12/14 16:13:29 by aperron           #+#    #+#             */
+/*   Updated: 2023/12/14 16:14:17 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef LIBFT_GET_NEXT_LINE_H
+# define LIBFT_GET_NEXT_LINE_H
 
-# include "../libft/libft.h"
+# include "../libft.h"
+
+char	*get_next_line(int fd);
 
 #endif

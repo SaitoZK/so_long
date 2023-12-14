@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 16:50:17 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/14 17:40:28 by aperron          ###   ########.fr       */
+/*   Created: 2023/10/24 16:01:47 by aperron           #+#    #+#             */
+/*   Updated: 2023/12/14 16:52:55 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "../libft.h"
 
-# include "../libft/libft.h"
+char	*ft_strdup(const char *s1)
+{
+	int		index;
+	char	*ptr;
 
-#endif
+	ptr = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + 1));
+	if (!ptr)
+		return (NULL);
+	index = 0;
+	while (s1[index] != '\0')
+	{
+		ptr[index] = s1[index];
+		index++;
+	}
+	ptr[index] = '\0';
+	return (ptr);
+}

@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 16:50:17 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/14 17:40:28 by aperron          ###   ########.fr       */
+/*   Created: 2023/12/14 14:59:36 by aperron           #+#    #+#             */
+/*   Updated: 2023/12/14 16:52:55 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "../libft.h"
 
-# include "../libft/libft.h"
+void	ft_strrev(char *str)
+{
+	size_t	length;
+	size_t	index;
+	char	tmp;
 
-#endif
+	length = 0;
+	while (str[length] != '\0')
+		length++;
+	index = 0;
+	while (index < length / 2)
+	{
+		tmp = str[index];
+		str[index] = str[length - index - 1];
+		str[length - index - 1] = tmp;
+		index++;
+	}
+}

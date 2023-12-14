@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 16:50:17 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/14 17:40:28 by aperron          ###   ########.fr       */
+/*   Created: 2023/10/11 12:47:10 by aperron           #+#    #+#             */
+/*   Updated: 2023/12/14 16:52:55 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "../libft.h"
 
-# include "../libft/libft.h"
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t	index;
+	char	*d;
+	char	*s;
 
-#endif
+	if (!dest && !src)
+		return (NULL);
+	index = 0;
+	d = dest;
+	s = (char *)src;
+	while (index < n)
+	{
+		d[index] = s[index];
+		index++;
+	}
+	return (dest);
+}
