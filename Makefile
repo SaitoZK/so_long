@@ -6,7 +6,7 @@
 #    By: aperron <aperron@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 16:15:56 by aperron           #+#    #+#              #
-#    Updated: 2023/12/14 17:59:07 by aperron          ###   ########.fr        #
+#    Updated: 2023/12/20 07:56:18 by aperron          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME		= exe
 
 SRC_FOLDER	= ./src/
 MLX_FOLDER	= ./mlx/
-LFT_FOLDER	= ./libft/
+LFT_FOLDER	= ./lft/
 
 SRCS_NPF	= main.c 
 SRCS		= $(addprefix $(SRC_FOLDER), $(SRCS_NPF))

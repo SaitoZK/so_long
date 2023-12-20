@@ -6,13 +6,13 @@
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 16:50:17 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/14 17:40:28 by aperron          ###   ########.fr       */
+/*   Updated: 2023/12/20 07:47:03 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include "../libft/libft.h"
+# include "../lft/libft.h"
 
 #endif
