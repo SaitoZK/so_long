@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   structure.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 16:50:17 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/20 10:08:13 by aperron          ###   ########.fr       */
+/*   Created: 2023/12/20 09:53:20 by aperron           #+#    #+#             */
+/*   Updated: 2023/12/20 09:56:38 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef STRUCTURE_H
+# define STRUCTURE_H
 
-# include "../lft/libft.h"
-# include "../mlx/mlx.h"
-
-# include "structure.h"
-
-int	on_keypress(int keycode, t_game *game);
-
-int	update(t_game *game);
-
-int	draw(t_game *game);
+typedef struct s_game
+{
+	void	*test;
+}	t_game;
 
 #endif

@@ -6,7 +6,7 @@
 #    By: aperron <aperron@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 16:15:56 by aperron           #+#    #+#              #
-#    Updated: 2023/12/20 07:56:18 by aperron          ###   ########.fr        #
+#    Updated: 2023/12/20 10:09:22 by aperron          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,11 @@ SRC_FOLDER	= ./src/
 MLX_FOLDER	= ./mlx/
 LFT_FOLDER	= ./lft/
 
-SRCS_NPF	= main.c 
+SRCS_NPF	= main.c game_loop.c
 SRCS		= $(addprefix $(SRC_FOLDER), $(SRCS_NPF))
 
 FLAGS		= -g -Wall -Wextra -Werror
-MLX_FLAGS	= -Lmlx -lmlx -framework OpenGL -framework AppKit
+MLX_FLAGS	= -framework OpenGL -framework AppKit
 
 CC			= gcc
 
@@ -36,7 +36,7 @@ TO_CLEAN	= *.dSYM *.o
 all: $(NAME) run
 
 $(NAME): $(SRCS)
-	@$(CC) $(FLAGS) $(SRCS) -L$(LFT_FOLDER) -lft -o $(NAME)
+	$(CC) $(FLAGS) $(SRCS) -L$(LFT_FOLDER) -lft -L$(MLX_FOLDER) -lmlx $(MLX_FLAGS) -o $(NAME)
 
 run:
 	@./$(NAME)

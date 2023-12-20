@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   game_loop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 16:50:17 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/20 10:08:13 by aperron          ###   ########.fr       */
+/*   Created: 2023/12/20 09:47:55 by aperron           #+#    #+#             */
+/*   Updated: 2023/12/20 10:15:58 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "../headers/so_long.h"
 
-# include "../lft/libft.h"
-# include "../mlx/mlx.h"
+int	on_keypress(int keycode, t_game *game)
+{
+	if (keycode == 53)
+		exit(0);
+	ft_printf("Key pressed: %d\n", keycode);
+	if (game)
+		return (0);
+	return (0);
+}
 
-# include "structure.h"
+int	update(t_game *game)
+{
+	if (game)
+		return (0);
+	return (0);
+}
 
-int	on_keypress(int keycode, t_game *game);
-
-int	update(t_game *game);
-
-int	draw(t_game *game);
-
-#endif
+int	draw(t_game *game)
+{
+	if (game)
+		return (0);
+	return (0);
+}
