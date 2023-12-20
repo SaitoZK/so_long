@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   structure.h                                        :+:      :+:    :+:   */
+/*   globals.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/20 09:53:20 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/20 15:07:49 by aperron          ###   ########.fr       */
+/*   Created: 2023/12/20 13:38:01 by aperron           #+#    #+#             */
+/*   Updated: 2023/12/20 14:03:00 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCTURE_H
-# define STRUCTURE_H
+#ifndef GLOBALS_H
+# define GLOBALS_H
 
-typedef struct s_animation
-{
-	int		nb_frames;
-	int		current_frame;
-	int		time_update;
-	int		timer;
-}	t_animation;
+# define WINDOW_WIDTH 1000
+# define WINDOW_HEIGHT 1000
+# define WINDOW_NAME "So long!!"
 
-typedef struct entity_frames
-{
-	void	**slime_frames;
-}	t_entity_frames;
+# define DELTA_TIME 100
 
-typedef struct s_game
-{
-	void			*mlx;
-	void			*win;
-	t_entity_frames	*entity_frames;
-}	t_game;
+# define TILE_SIZE 64
 
 #endif

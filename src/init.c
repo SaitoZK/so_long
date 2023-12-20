@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_loop.c                                        :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperron <aperron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/20 09:47:55 by aperron           #+#    #+#             */
-/*   Updated: 2023/12/20 15:56:32 by aperron          ###   ########.fr       */
+/*   Created: 2023/12/20 13:31:15 by aperron           #+#    #+#             */
+/*   Updated: 2023/12/20 15:54:31 by aperron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/so_long.h"
 
-int	game_loop(t_game *game)
+t_game	*init_game(void)
 {
-	update(game);
-	draw(game);
-	return (0);
+	t_game	*game;
+
+	game = malloc(sizeof(*game));
+	game->mlx = mlx_init();
+	game->win = mlx_new_window(game->mlx,
+			WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_NAME);
+	game->entity_frames = get_frames(game->mlx);
+	return (game);
 }
 
-int	on_keypress(int keycode, t_game *game)
+t_animation	*get_slime(void)
 {
-	if (keycode == 53)
-		exit(0);
-	if (game)
-		return (0);
-	return (0);
-}
+	t_animation	*slime;
 
-int	update(t_game *game)
-{
-	if (game)
-		return (0);
-	return (0);
-}
-
-int	draw(t_game *game)
-{
-	mlx_put_image_to_window(game->mlx, game->win,
-		game->entity_frames->slime_frames[3], TILE_SIZE, TILE_SIZE);
-	if (game)
-		return (0);
-	return (0);
+	slime = malloc(sizeof(t_animation *));
+	slime->nb_frames = 1;
+	slime->current_frame = 0;
+	slime->timer = 0;
+	slime->time_update = 500;
+	return (slime);
 }

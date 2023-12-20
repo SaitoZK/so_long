@@ -6,7 +6,7 @@
 #    By: aperron <aperron@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 16:15:56 by aperron           #+#    #+#              #
-#    Updated: 2023/12/20 10:09:22 by aperron          ###   ########.fr        #
+#    Updated: 2023/12/20 15:40:36 by aperron          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC_FOLDER	= ./src/
 MLX_FOLDER	= ./mlx/
 LFT_FOLDER	= ./lft/
 
-SRCS_NPF	= main.c game_loop.c
+SRCS_NPF	= main.c game_loop.c init.c animations.c
 SRCS		= $(addprefix $(SRC_FOLDER), $(SRCS_NPF))
 
 FLAGS		= -g -Wall -Wextra -Werror
